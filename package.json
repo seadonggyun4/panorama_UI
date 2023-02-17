@@ -2,14 +2,27 @@
   "name": "panorama_ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "productName": "panorama_ui",
   "scripts": {
-    "sass" : "sass --watch scss/style.scss css/style.css"
+    "sass": "sass --watch scss/style.scss css/style.css",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "sass": "^1.52.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "^23.1.0"
   }
 }
