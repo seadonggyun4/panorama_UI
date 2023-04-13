@@ -4,6 +4,9 @@ const createWindow = () => {
     const window = new BrowserWindow({
         width: 1500,
         height: 800,
+        webPreferences: {
+            webviewTag: true
+        }
     });
     window.loadFile("index.html");
 
@@ -36,6 +39,7 @@ const createWindow = () => {
     const customMenu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(customMenu)
 };
+
 
 
 app.whenReady().then(() => {
